@@ -10,7 +10,7 @@
 <body>
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo" onclick="navigateTo('home')">THE ACADEMY</div>
+            <div class="logo" onclick="navigateTo('home'); return false">THE ACADEMY</div>
             <div class="nav-links">
                 <a onclick="navigateTo('home'); return false" href="#">Home</a>
                 <a onclick="navigateTo('map'); return false" href="#">Atlas</a>
@@ -61,14 +61,14 @@
                 <div class="branch-node darshana" onclick="navigateTo('darshana'); return false" style="top:68%;left:50%;transform:translateX(-50%)">
                     <span>Darshana<br>Wisdom of Bharat</span>
                 </div>
-                <svg class="connections" width="100%" height="100%">
-                    <line x1="50%" y1="42%" x2="20%" y2="25%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="80%" y2="25%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="18%" y2="55%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="82%" y2="55%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="25%" y2="80%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="75%" y2="80%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
-                    <line x1="50%" y1="42%" x2="50%" y2="78%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                <svg class="connections" width="100%" height="100%" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <line x1="50" y1="42" x2="20" y2="25" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="80" y2="25" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="18" y2="55" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="82" y2="55" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="25" y2="80" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="75" y2="80" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
+                    <line x1="50" y1="42" x2="50" y2="78" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
                 </svg>
             </div>
             <p class="map-instruction">Click any node to explore</p>
@@ -97,7 +97,7 @@
         <div class="rotating-quotes" id="quotes-ethics"></div>
     </section>
 
-    <!-- POLITICAL -->
+    <!-- POLITICAL PHILOSOPHY -->
     <section id="political" class="page branch-page">
         <div class="branch-header">
             <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
