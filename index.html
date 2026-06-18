@@ -12,60 +12,55 @@
         <div class="nav-container">
             <div class="logo" onclick="navigateTo('home')">THE ACADEMY</div>
             <div class="nav-links">
-                <a href="#" onclick="navigateTo('home')">Home</a>
-                <a href="#" onclick="navigateTo('map')">Atlas</a>
+                <a onclick="navigateTo('home'); return false" href="#">Home</a>
+                <a onclick="navigateTo('map'); return false" href="#">Atlas</a>
                 <div class="dropdown">
                     <a href="#">Branches ▼</a>
                     <div class="dropdown-content">
-                        <a href="#" onclick="navigateTo('ethics')">Ethics</a>
-                        <a href="#" onclick="navigateTo('epistemology')">Epistemology</a>
-                        <a href="#" onclick="navigateTo('metaphysics')">Metaphysics</a>
-                        <a href="#" onclick="navigateTo('political')">Political Philosophy</a>
-                        <a href="#" onclick="navigateTo('logic')">Logic</a>
-                        <a href="#" onclick="navigateTo('aesthetics')">Aesthetics</a>
-                        <a href="#" onclick="navigateTo('darshana')">Darshana</a>
+                        <a onclick="navigateTo('ethics'); return false" href="#">Ethics</a>
+                        <a onclick="navigateTo('epistemology'); return false" href="#">Epistemology</a>
+                        <a onclick="navigateTo('metaphysics'); return false" href="#">Metaphysics</a>
+                        <a onclick="navigateTo('political'); return false" href="#">Political Philosophy</a>
+                        <a onclick="navigateTo('logic'); return false" href="#">Logic</a>
+                        <a onclick="navigateTo('aesthetics'); return false" href="#">Aesthetics</a>
+                        <a onclick="navigateTo('darshana'); return false" href="#">Darshana</a>
                     </div>
                 </div>
-                <a href="#" onclick="navigateTo('timeline')">Timeline</a>
-                <a href="#" onclick="navigateTo('glossary')">Lexicon</a>
-                <a href="#" onclick="navigateTo('contributions')">Contributions</a>
+                <a onclick="navigateTo('timeline'); return false" href="#">Timeline</a>
+                <a onclick="navigateTo('glossary'); return false" href="#">Lexicon</a>
+                <a onclick="navigateTo('contributions'); return false" href="#">Contributions</a>
             </div>
         </div>
     </nav>
 
-    <!-- HOME / ATLAS -->
+    <!-- HOME -->
     <section id="home" class="page active">
         <div class="hero">
             <div class="parchment-overlay">
                 <h1 class="club-title">THE ACADEMY</h1>
                 <p class="motto">Philosophy Atlas</p>
-                <button onclick="navigateTo('map')" class="explore-btn">Enter the Atlas</button>
+                <button onclick="navigateTo('map'); return false" class="explore-btn">Enter the Atlas</button>
             </div>
         </div>
     </section>
 
-    <!-- INTERACTIVE ATLAS -->
+    <!-- ATLAS -->
     <section id="map" class="page">
         <div class="map-container">
             <h2 class="section-title">Philosophy Atlas</h2>
             <div class="philosophy-map">
-                <div class="central-node" onclick="navigateTo('home')">
+                <div class="central-node" onclick="navigateTo('home'); return false">
                     <span>PHILOSOPHY</span>
                 </div>
-                
-                <!-- Main Branches -->
-                <div class="branch-node ethics" onclick="navigateTo('ethics')" style="top:18%;left:12%">Ethics</div>
-                <div class="branch-node epistemology" onclick="navigateTo('epistemology')" style="top:18%;right:12%">Epistemology</div>
-                <div class="branch-node metaphysics" onclick="navigateTo('metaphysics')" style="top:48%;left:8%">Metaphysics</div>
-                <div class="branch-node political" onclick="navigateTo('political')" style="top:48%;right:8%">Political</div>
-                <div class="branch-node logic" onclick="navigateTo('logic')" style="bottom:22%;left:18%">Logic</div>
-                <div class="branch-node aesthetics" onclick="navigateTo('aesthetics')" style="bottom:22%;right:18%">Aesthetics</div>
-                
-                <!-- Darshana Node -->
-                <div class="branch-node darshana" onclick="navigateTo('darshana')" style="top:65%;left:50%;transform:translateX(-50%)">
+                <div class="branch-node ethics" onclick="navigateTo('ethics'); return false" style="top:18%;left:12%">Ethics</div>
+                <div class="branch-node epistemology" onclick="navigateTo('epistemology'); return false" style="top:18%;right:12%">Epistemology</div>
+                <div class="branch-node metaphysics" onclick="navigateTo('metaphysics'); return false" style="top:48%;left:8%">Metaphysics</div>
+                <div class="branch-node political" onclick="navigateTo('political'); return false" style="top:48%;right:8%">Political</div>
+                <div class="branch-node logic" onclick="navigateTo('logic'); return false" style="bottom:22%;left:18%">Logic</div>
+                <div class="branch-node aesthetics" onclick="navigateTo('aesthetics'); return false" style="bottom:22%;right:18%">Aesthetics</div>
+                <div class="branch-node darshana" onclick="navigateTo('darshana'); return false" style="top:68%;left:50%;transform:translateX(-50%)">
                     <span>Darshana<br>Wisdom of Bharat</span>
                 </div>
-
                 <svg class="connections" width="100%" height="100%">
                     <line x1="50%" y1="42%" x2="20%" y2="25%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
                     <line x1="50%" y1="42%" x2="80%" y2="25%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
@@ -76,22 +71,19 @@
                     <line x1="50%" y1="42%" x2="50%" y2="78%" stroke="#D4AF37" stroke-width="3" stroke-dasharray="6,3"/>
                 </svg>
             </div>
-            <p class="map-instruction">Click any node to explore • Hover for glow</p>
+            <p class="map-instruction">Click any node to explore</p>
         </div>
     </section>
 
-    <!-- BRANCH PAGES -->
-    <!-- Ethics -->
+    <!-- ETHICS -->
     <section id="ethics" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Ethics</h1>
         </div>
         <div class="definition">Ethics is the philosophical study of moral principles and values that govern human behavior and judgments about what ought to be done.</div>
         <div class="philosophers">Socrates, Plato, Aristotle, Immanuel Kant, John Stuart Mill</div>
-        
         <div class="top-quote">"The unexamined life is not worth living." — Socrates</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -102,21 +94,18 @@
                 <ul><li>What is the idea of a good life?</li><li>Are moral truths absolute?</li><li>How do we resolve moral dilemmas?</li><li>What are our duties to others?</li><li>Is morality culturally relative?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-ethics"></div>
     </section>
 
-    <!-- Political Philosophy -->
+    <!-- POLITICAL -->
     <section id="political" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Political Philosophy</h1>
         </div>
         <div class="definition">Political Philosophy is the normative discipline that analyses how we ought to live together and examines the ideas of power.</div>
         <div class="philosophers">Plato, Aristotle, John Locke, Niccolo Machiavelli, Karl Marx</div>
-        
         <div class="top-quote">"The price good men pay for indifference to public affairs is to be ruled by evil men." — Plato</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -127,21 +116,18 @@
                 <ul><li>What is justice?</li><li>Why should political authority be obeyed?</li><li>What is the relationship between the individual and the community?</li><li>What is equality?</li><li>Who should rule and for what purpose?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-political"></div>
     </section>
 
-    <!-- Aesthetics -->
+    <!-- AESTHETICS -->
     <section id="aesthetics" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Aesthetics</h1>
         </div>
         <div class="definition">Aesthetics is the branch of philosophy concerned with beauty, art, taste, and sensory experience.</div>
         <div class="philosophers">Plato, Immanuel Kant, Friedrich Nietzsche, John Dewey, Arthur Schopenhauer</div>
-        
         <div class="top-quote">"Nothing is beautiful, only man: on this piece of naive rests all aesthetics, it is the first truth of aesthetics." — Friedrich Nietzsche</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -152,21 +138,18 @@
                 <ul><li>What is Beauty?</li><li>Is Art Subjective or Objective?</li><li>What is the Purpose of Art?</li><li>Can We Define Good Taste?</li><li>How Does Art Relate to Truth?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-aesthetics"></div>
     </section>
 
-    <!-- Metaphysics -->
+    <!-- METAPHYSICS -->
     <section id="metaphysics" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Metaphysics</h1>
         </div>
         <div class="definition">Metaphysics is the branch of philosophy concerned with the fundamental nature of reality, existence, and being.</div>
         <div class="philosophers">Plato, Aristotle, Immanuel Kant, René Descartes, Swami Vivekananda</div>
-        
         <div class="top-quote">"Why are there beings at all, instead of nothing?" — Martin Heidegger</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -177,21 +160,18 @@
                 <ul><li>What is the fundamental nature of reality?</li><li>What is the relationship between mind and body?</li><li>Why is there something rather than nothing?</li><li>What is the nature of the self and personal identity?</li><li>Do humans have free will?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-metaphysics"></div>
     </section>
 
-    <!-- Epistemology -->
+    <!-- EPISTEMOLOGY -->
     <section id="epistemology" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Epistemology</h1>
         </div>
         <div class="definition">Epistemology is the branch of philosophy concerned with the nature, origin, and limits of human knowledge.</div>
         <div class="philosophers">Plato, René Descartes, John Locke, David Hume, Immanuel Kant</div>
-        
         <div class="top-quote">"The human understanding, when it has once adopted an opinion, draws all things else to support and agree to it." — Francis Bacon</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -202,21 +182,18 @@
                 <ul><li>What is knowledge?</li><li>Can we trust our senses?</li><li>Is certainty possible?</li><li>How do we distinguish truth from belief?</li><li>What is the role of reason?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-epistemology"></div>
     </section>
 
-    <!-- Logic -->
+    <!-- LOGIC -->
     <section id="logic" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Logic</h1>
         </div>
         <div class="definition">Logic is the study of the methods and principles used to distinguish correct reasoning from incorrect reasoning.</div>
         <div class="philosophers">Aristotle, Gottlob Frege, Uddayana, Bertrand Russell, Ludwig Wittgenstein</div>
-        
         <div class="top-quote">"Logic pervades the world; the limits of the world are also its limits." — Ludwig Wittgenstein</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Five Main Ideas</h3>
@@ -227,21 +204,18 @@
                 <ul><li>What makes an argument valid?</li><li>Can logic be complete?</li><li>How do we detect fallacies?</li><li>What is the relationship between language and logic?</li><li>Are there limits to reason?</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-logic"></div>
     </section>
 
-    <!-- Darshana -->
+    <!-- DARSHANA -->
     <section id="darshana" class="page branch-page">
         <div class="branch-header">
-            <button onclick="navigateTo('map')" class="back-btn">← Back to Atlas</button>
+            <button onclick="navigateTo('map'); return false" class="back-btn">← Back to Atlas</button>
             <h1>Darshana: Wisdom of Bharat</h1>
         </div>
         <div class="definition">Indian philosophy as a plural tradition of inquiry into reality, knowledge, and liberation.</div>
         <div class="philosophers">Mahavira, Buddha, Nagarjuna, Adi Shankaracharya, Chanakya</div>
-        
         <div class="top-quote">"The true Self (Atman) is identical with ultimate reality (Brahman); realise this and be free." — Swami Vivekananda</div>
-        
         <div class="cards-container">
             <div class="card">
                 <h3>Six Schools</h3>
@@ -252,7 +226,6 @@
                 <ul><li>Dharma</li><li>Karma</li><li>Moksha</li><li>Atman</li><li>Brahman</li><li>Shunya</li></ul>
             </div>
         </div>
-        
         <div class="rotating-quotes" id="quotes-darshana"></div>
     </section>
 
@@ -281,12 +254,15 @@
                 <div class="card submission-card">
                     <h3>Submit Your Reflection</h3>
                     <textarea id="submission-text" rows="8" placeholder="Share your thoughts (under 600 words)..."></textarea>
-                    <button onclick="submitContribution()" class="submit-btn">Submit</button>
+                    <button onclick="submitContribution(); return false" class="submit-btn">Submit</button>
                 </div>
                 <div class="card">
                     <h3>Guidelines</h3>
                     <ul>
-                        <li>Under 600 words</li><li>Respectful tone</li><li>Original content</li><li>Thoughtful insight</li>
+                        <li>Under 600 words</li>
+                        <li>Respectful tone</li>
+                        <li>Original content</li>
+                        <li>Thoughtful insight</li>
                     </ul>
                 </div>
             </div>
@@ -296,8 +272,8 @@
 
     <footer>
         <div class="footer-content">
-            © The Academy • A space for curious minds • DAV Public School, Lawrence Road, Amritsar
-            <br><span id="last-updated"></span>
+            © The Academy • A space for curious minds • DAV Public School, Lawrence Road, Amritsar<br>
+            <span id="last-updated"></span>
         </div>
     </footer>
 
