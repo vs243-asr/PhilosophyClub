@@ -1,140 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Academy — Philosophy Atlas</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=EB+Garamond:wght@400;500&amp;display=swap" rel="stylesheet">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Academy | Philosophy Atlas</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <!-- NAV -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="logo">THE ACADEMY</div>
-            <div class="nav-links">
-                <a href="#" onclick="navigateTo('home')">Atlas</a>
-                <a href="#" onclick="navigateTo('darshana')">Darshana</a>
-                <a href="#" onclick="navigateTo('timeline')">Timeline</a>
-                <a href="#" onclick="navigateTo('lexicon')">Lexicon</a>
-            </div>
-        </div>
-    </nav>
 
-    <!-- HOME / ATLAS -->
-    <section id="home" class="page active">
-        <div class="atlas-container">
-            <div class="atlas-bg"></div>
-            <div class="center-node" onclick="navigateToBranch('philosophy')">
-                <h1>Philosophy</h1>
-            </div>
-            
-            <!-- Branch nodes -->
-            <div class="branch-nodes">
-                <div class="branch-node" data-branch="ethics" onclick="navigateToBranch('ethics')">
-                    <span>Ethics</span>
-                </div>
-                <div class="branch-node" data-branch="political" onclick="navigateToBranch('political')">
-                    <span>Political Philosophy</span>
-                </div>
-                <div class="branch-node" data-branch="aesthetics" onclick="navigateToBranch('aesthetics')">
-                    <span>Aesthetics</span>
-                </div>
-                <div class="branch-node" data-branch="metaphysics" onclick="navigateToBranch('metaphysics')">
-                    <span>Metaphysics</span>
-                </div>
-                <div class="branch-node" data-branch="epistemology" onclick="navigateToBranch('epistemology')">
-                    <span>Epistemology</span>
-                </div>
-                <div class="branch-node" data-branch="logic" onclick="navigateToBranch('logic')">
-                    <span>Logic</span>
-                </div>
-            </div>
-        </div>
-        
-        <!-- Darshana separate node -->
-        <div class="darshana-node" onclick="navigateTo('darshana')">
-            <span>Darshana: Wisdom of Bharat</span>
-        </div>
-    </section>
+<div class="parchment-overlay"></div>
+<div class="compass-rose"></div>
 
-    <!-- BRANCH PAGES CONTAINER -->
-    <div id="branch-pages" class="branch-page-container hidden">
-        <!-- Dynamically loaded via JS -->
-    </div>
+<header class="navbar">
 
-    <!-- DARSHANA PAGE -->
-    <section id="darshana" class="page hidden">
-        <div class="content-container">
-            <h1 class="page-title">Darshana: Wisdom of Bharat</h1>
-            <p class="definition">Indian philosophy as a plural tradition of inquiry into reality, knowledge, and liberation.</p>
-            
-            <div class="section">
-                <h2>Schools</h2>
-                <div class="cards-grid">
-                    <div class="card">Nyaya</div>
-                    <div class="card">Vaisheshika</div>
-                    <div class="card">Samkhya</div>
-                    <div class="card">Yoga</div>
-                    <div class="card">Mimamsa</div>
-                    <div class="card">Vedanta</div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>Thinkers</h2>
-                <div class="cards-grid">
-                    <div class="card">Mahavira</div>
-                    <div class="card">Buddha</div>
-                    <div class="card">Nagarjuna</div>
-                    <div class="card">Adi Shankaracharya</div>
-                    <div class="card">Chanakya</div>
-                </div>
-            </div>
-            
-            <div class="section">
-                <h2>Core Ideas</h2>
-                <div class="cards-grid">
-                    <div class="card">Dharma</div>
-                    <div class="card">Karma</div>
-                    <div class="card">Moksha</div>
-                    <div class="card">Atman</div>
-                    <div class="card">Brahman</div>
-                    <div class="card">Shunya</div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="logo">
+THE ACADEMY
+</div>
 
-    <!-- TIMELINE PAGE -->
-    <section id="timeline" class="page hidden">
-        <div class="content-container">
-            <h1 class="page-title">Philosophy Timeline</h1>
-            <div class="timeline">
-                <div class="timeline-line"></div>
-                <!-- JS will populate nodes -->
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <!-- LEXICON PAGE -->
-    <section id="lexicon" class="page hidden">
-        <div class="content-container">
-            <h1 class="page-title">Lexicon of Thought</h1>
-            <p class="subtitle">60 Essential Philosophical Terms (A–Z)</p>
-            <div id="glossary" class="accordion">
-                <!-- JS populated -->
-            </div>
-        </div>
-    </section>
+<a href="atlas.html">Atlas</a>
 
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="gold-divider"></div>
-        <p>© The Academy • A space for curious minds • DAV Public School, Lawrence Road, Amritsar</p>
-        <p id="last-updated">Last updated: <span></span></p>
-    </footer>
+<a href="timeline.html">Timeline</a>
 
-    <script src="script.js"></script>
+<a href="lexicon.html">Lexicon</a>
+
+<a href="darshana.html">Darshana</a>
+
+</nav>
+
+</header>
+
+<main>
+
+<section class="hero">
+
+<h1>
+Philosophy Atlas
+</h1>
+
+<p>
+A cartography of humanity's deepest questions.
+</p>
+
+</section>
+
+<section class="atlas-container">
+
+<div class="center-node">
+Philosophy
+</div>
+
+<div class="connector connector-1"></div>
+<div class="connector connector-2"></div>
+<div class="connector connector-3"></div>
+<div class="connector connector-4"></div>
+<div class="connector connector-5"></div>
+<div class="connector connector-6"></div>
+
+<a href="ethics.html" class="atlas-node ethics">
+Ethics
+</a>
+
+<a href="epistemology.html" class="atlas-node epistemology">
+Epistemology
+</a>
+
+<a href="metaphysics.html" class="atlas-node metaphysics">
+Metaphysics
+</a>
+
+<a href="political-philosophy.html" class="atlas-node political">
+Political Philosophy
+</a>
+
+<a href="logic.html" class="atlas-node logic">
+Logic
+</a>
+
+<a href="aesthetics.html" class="atlas-node aesthetics">
+Aesthetics
+</a>
+
+</section>
+
+<section class="darshana-section">
+
+<a href="darshana.html" class="darshana-node">
+
+Darshana:
+Wisdom of Bharat
+
+</a>
+
+</section>
+
+</main>
+
+<footer>
+
+<div class="footer-divider"></div>
+
+<p>
+© The Academy • A space for curious minds •
+DAV Public School, Lawrence Road, Amritsar •
+Last updated:
+<span id="current-date"></span>
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
 </body>
 </html>
