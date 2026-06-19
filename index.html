@@ -5,77 +5,146 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>The Academy • Philosophy Atlas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Navigation -->
     <nav class="navbar">
         <div class="nav-container">
-            <div class="logo">THE ACADEMY</div>
+            <a href="#" class="logo" onclick="showPage('home')">THE ACADEMY</a>
             <div class="nav-links">
                 <a href="#" onclick="showPage('home')">Atlas</a>
                 <a href="#" onclick="showPage('community')">Community</a>
+                <a href="#" onclick="showPage('contribute')">Contribute</a>
             </div>
         </div>
     </nav>
 
-    <!-- HOME PAGE -->
-    <div id="home-page" class="page active">
-        <header class="hero">
-            <h1 class="academy-title">THE ACADEMY</h1>
-            <p class="tagline">Exploring the Timeless Questions of Human Existence</p>
-        </header>
-
-        <div class="atlas-container">
-            <h2 class="atlas-heading">Philosophy Atlas</h2>
-            <div class="atlas">
-                <div class="node central" onclick="showBranch('ethics')">
-                    <div class="node-circle"><span>Philosophy</span></div>
+    <!-- HOME / ATLAS PAGE -->
+    <section id="home-page" class="page active">
+        <div class="hero">
+            <h1 class="philosophy-center">PHILOSOPHY</h1>
+            <div class="atlas-container">
+                <div class="central-node" onclick="showBranch('home')">
+                    <div class="node-circle">🧠</div>
+                    <span>Philosophy</span>
                 </div>
+                
                 <div class="branch-nodes">
-                    <div class="branch-node" onclick="showBranch('ethics')"><div class="node-circle">Ethics</div></div>
-                    <div class="branch-node" onclick="showBranch('epistemology')"><div class="node-circle">Epistemology</div></div>
-                    <div class="branch-node" onclick="showBranch('metaphysics')"><div class="node-circle">Metaphysics</div></div>
-                    <div class="branch-node" onclick="showBranch('political')"><div class="node-circle">Political</div></div>
-                    <div class="branch-node" onclick="showBranch('logic')"><div class="node-circle">Logic</div></div>
-                    <div class="branch-node" onclick="showBranch('aesthetics')"><div class="node-circle">Aesthetics</div></div>
+                    <div class="branch-node" onclick="showBranch('ethics')">
+                        <div class="node-circle">⚖️</div>
+                        <span>Ethics</span>
+                    </div>
+                    <div class="branch-node" onclick="showBranch('political')">
+                        <div class="node-circle">🏛️</div>
+                        <span>Political</span>
+                    </div>
+                    <div class="branch-node" onclick="showBranch('aesthetics')">
+                        <div class="node-circle">🎨</div>
+                        <span>Aesthetics</span>
+                    </div>
+                    <div class="branch-node" onclick="showBranch('metaphysics')">
+                        <div class="node-circle">🌌</div>
+                        <span>Metaphysics</span>
+                    </div>
+                    <div class="branch-node" onclick="showBranch('epistemology')">
+                        <div class="node-circle">🔍</div>
+                        <span>Epistemology</span>
+                    </div>
+                    <div class="branch-node" onclick="showBranch('logic')">
+                        <div class="node-circle">⟡</div>
+                        <span>Logic</span>
+                    </div>
                 </div>
             </div>
+            <p class="tagline">Explore the branches of wisdom</p>
         </div>
-    </div>
+    </section>
 
-    <!-- BRANCH PAGE -->
-    <div id="branch-page" class="page">
-        <button class="back-btn" onclick="backToHome()">← Back to Atlas</button>
-        <div id="branch-content"></div>
-    </div>
+    <!-- BRANCH PAGES -->
+    <section id="branch-page" class="page">
+        <button class="back-btn" onclick="goBack()">← Back to Atlas</button>
+        
+        <div class="branch-content">
+            <h1 id="branch-title" class="branch-title"></h1>
+            <p id="branch-definition" class="definition"></p>
+
+            <!-- Top Quote -->
+            <div class="top-quote" id="top-quote"></div>
+
+            <!-- Philosophers -->
+            <div class="section">
+                <h2>Key Thinkers</h2>
+                <div class="cards-grid" id="philosophers-grid"></div>
+            </div>
+
+            <!-- Five Ideas -->
+            <div class="section">
+                <h2>Core Ideas</h2>
+                <div class="cards-grid" id="ideas-grid"></div>
+            </div>
+
+            <!-- Five Questions -->
+            <div class="section">
+                <h2>Big Questions</h2>
+                <div class="cards-grid" id="questions-grid"></div>
+            </div>
+
+            <!-- Rotating Quotes -->
+            <div class="rotating-quotes">
+                <h3>Wisdom in Rotation</h3>
+                <div id="rotating-quote" class="rotating-quote"></div>
+            </div>
+        </div>
+    </section>
 
     <!-- COMMUNITY PAGE -->
-    <div id="community-page" class="page">
-        <div class="community-container">
-            <h1>Community Contributions</h1>
-            <div class="cards-grid">
-                <div class="card large">
-                    <h2>Weekly Submissions</h2>
-                    <p class="card-desc">Share your reflections, essays, or thoughts (under 700 words). All submissions are reviewed and may be featured.</p>
-                    <textarea id="submission-text" placeholder="Paste your contribution here..."></textarea>
-                    <button onclick="submitContribution()" class="submit-btn">Submit Contribution</button>
+    <section id="community-page" class="page">
+        <div class="page-container">
+            <h1>Community</h1>
+            <p class="subtitle">A gathering place for thoughtful dialogue</p>
+            
+            <div class="community-grid">
+                <div class="card">
+                    <h3>Weekly Submissions</h3>
+                    <p>Share your reflections, essays, or responses (under 700 words). Selected pieces will be featured.</p>
+                    <button onclick="showPage('contribute')" class="gold-btn">Submit Your Piece</button>
                 </div>
                 <div class="card">
-                    <h2>Submission Guidelines</h2>
+                    <h3>Discussion Guidelines</h3>
                     <ul>
+                        <li>Original content only</li>
+                        <li>Be respectful and constructive</li>
                         <li>Maximum 700 words</li>
-                        <li>Respectful and constructive tone</li>
-                        <li>Original content or properly attributed</li>
-                        <li>Related to philosophy or the current branch theme</li>
-                        <li>Anonymous submissions welcome</li>
+                        <li>Focus on ideas, not personal attacks</li>
                     </ul>
                 </div>
             </div>
         </div>
-    </div>
+    </section>
+
+    <!-- CONTRIBUTE PAGE -->
+    <section id="contribute-page" class="page">
+        <div class="page-container">
+            <h1>Submit to The Academy</h1>
+            <form id="submission-form" onsubmit="handleSubmit(event)">
+                <label>Title of your piece</label>
+                <input type="text" id="sub-title" required placeholder="e.g., Reflections on Moral Relativism">
+                
+                <label>Your submission (max 700 words)</label>
+                <textarea id="sub-text" rows="15" required placeholder="Paste your text here..."></textarea>
+                
+                <label>Your name / pseudonym</label>
+                <input type="text" id="sub-author" required>
+                
+                <button type="submit" class="gold-btn">Submit for Review</button>
+            </form>
+            <p class="small">Submissions are reviewed by club moderators. Thank you for contributing!</p>
+        </div>
+    </section>
 
     <footer>
-        <p>&copy; The Academy • A Philosophy Collective</p>
+        <p>&copy; The Academy • Philosophy Club • Built with curiosity</p>
     </footer>
 
     <script src="script.js"></script>
