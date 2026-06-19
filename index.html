@@ -8,7 +8,6 @@
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Crimson+Text:wght@400;600&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- (Same full HTML as before - confirmed complete) -->
     <nav class="navbar">
         <div class="nav-container">
             <div class="logo">THE ACADEMY</div>
@@ -19,6 +18,7 @@
         </div>
     </nav>
 
+    <!-- HOME PAGE -->
     <div id="home-page" class="page active">
         <header class="hero">
             <h1 class="academy-title">THE ACADEMY</h1>
@@ -43,18 +43,20 @@
         </div>
     </div>
 
+    <!-- BRANCH PAGE -->
     <div id="branch-page" class="page">
         <button class="back-btn" onclick="backToHome()">← Back to Atlas</button>
         <div id="branch-content"></div>
     </div>
 
+    <!-- COMMUNITY PAGE -->
     <div id="community-page" class="page">
         <div class="community-container">
             <h1>Community Contributions</h1>
             <div class="cards-grid">
                 <div class="card large">
                     <h2>Weekly Submissions</h2>
-                    <p class="card-desc">Share your reflections, essays, or thoughts (under 700 words).</p>
+                    <p class="card-desc">Share your reflections, essays, or thoughts (under 700 words). All submissions are reviewed and may be featured.</p>
                     <textarea id="submission-text" placeholder="Paste your contribution here..."></textarea>
                     <button onclick="submitContribution()" class="submit-btn">Submit Contribution</button>
                 </div>
@@ -64,15 +66,18 @@
                         <li>Maximum 700 words</li>
                         <li>Respectful and constructive tone</li>
                         <li>Original content or properly attributed</li>
-                        <li>Related to philosophy</li>
-                        <li>Anonymous welcome</li>
+                        <li>Related to philosophy or the current branch theme</li>
+                        <li>Anonymous submissions welcome</li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
 
-    <footer><p>&copy; The Academy • A Philosophy Collective</p></footer>
+    <footer>
+        <p>&copy; The Academy • A Philosophy Collective</p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
