@@ -3,88 +3,138 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>The Academy • Philosophy Atlas</title>
+    <title>The Academy — Philosophy Atlas</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=EB+Garamond:wght@400;500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&amp;family=EB+Garamond:wght@400;500&amp;display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- NAV -->
     <nav class="navbar">
         <div class="nav-container">
-            <a href="#" class="logo" onclick="showPage('home')">THE ACADEMY</a>
+            <div class="logo">THE ACADEMY</div>
             <div class="nav-links">
-                <a href="#" onclick="showPage('home')">Atlas</a>
-                <a href="#" onclick="showPage('community')">Community</a>
-                <a href="#" onclick="showPage('contribute')">Contribute</a>
+                <a href="#" onclick="navigateTo('home')">Atlas</a>
+                <a href="#" onclick="navigateTo('darshana')">Darshana</a>
+                <a href="#" onclick="navigateTo('timeline')">Timeline</a>
+                <a href="#" onclick="navigateTo('lexicon')">Lexicon</a>
             </div>
         </div>
     </nav>
 
-    <!-- ATLAS HOME -->
-    <section id="home-page" class="page active">
-        <div class="hero">
-            <h1 class="philosophy-center">PHILOSOPHY</h1>
-            <div class="atlas-grid">
-                <div class="central-node" onclick="alert('Welcome! Tap any branch.')">
-                    <div class="node-circle">🧠</div>
-                    <span>Philosophy</span>
+    <!-- HOME / ATLAS -->
+    <section id="home" class="page active">
+        <div class="atlas-container">
+            <div class="atlas-bg"></div>
+            <div class="center-node" onclick="navigateToBranch('philosophy')">
+                <h1>Philosophy</h1>
+            </div>
+            
+            <!-- Branch nodes -->
+            <div class="branch-nodes">
+                <div class="branch-node" data-branch="ethics" onclick="navigateToBranch('ethics')">
+                    <span>Ethics</span>
                 </div>
-                <div class="branches">
-                    <div class="branch-item" onclick="showBranch('ethics')"><div class="node-circle">⚖️</div><span>Ethics</span></div>
-                    <div class="branch-item" onclick="showBranch('political')"><div class="node-circle">🏛️</div><span>Political</span></div>
-                    <div class="branch-item" onclick="showBranch('aesthetics')"><div class="node-circle">🎨</div><span>Aesthetics</span></div>
-                    <div class="branch-item" onclick="showBranch('metaphysics')"><div class="node-circle">🌌</div><span>Metaphysics</span></div>
-                    <div class="branch-item" onclick="showBranch('epistemology')"><div class="node-circle">🔍</div><span>Epistemology</span></div>
-                    <div class="branch-item" onclick="showBranch('logic')"><div class="node-circle">⟡</div><span>Logic</span></div>
+                <div class="branch-node" data-branch="political" onclick="navigateToBranch('political')">
+                    <span>Political Philosophy</span>
+                </div>
+                <div class="branch-node" data-branch="aesthetics" onclick="navigateToBranch('aesthetics')">
+                    <span>Aesthetics</span>
+                </div>
+                <div class="branch-node" data-branch="metaphysics" onclick="navigateToBranch('metaphysics')">
+                    <span>Metaphysics</span>
+                </div>
+                <div class="branch-node" data-branch="epistemology" onclick="navigateToBranch('epistemology')">
+                    <span>Epistemology</span>
+                </div>
+                <div class="branch-node" data-branch="logic" onclick="navigateToBranch('logic')">
+                    <span>Logic</span>
                 </div>
             </div>
-            <p class="tagline">Explore the branches of wisdom</p>
+        </div>
+        
+        <!-- Darshana separate node -->
+        <div class="darshana-node" onclick="navigateTo('darshana')">
+            <span>Darshana: Wisdom of Bharat</span>
         </div>
     </section>
 
-    <!-- BRANCH PAGE -->
-    <section id="branch-page" class="page">
-        <button class="back-btn" onclick="goBack()">← Back to Atlas</button>
-        <div class="branch-content">
-            <h1 id="branch-title"></h1>
-            <p id="branch-definition" class="definition"></p>
-            <div class="top-quote" id="top-quote"></div>
+    <!-- BRANCH PAGES CONTAINER -->
+    <div id="branch-pages" class="branch-page-container hidden">
+        <!-- Dynamically loaded via JS -->
+    </div>
 
-            <div class="section"><h2>Key Thinkers</h2><div class="cards-grid" id="philosophers-grid"></div></div>
-            <div class="section"><h2>Core Ideas</h2><div class="cards-grid" id="ideas-grid"></div></div>
-            <div class="section"><h2>Big Questions</h2><div class="cards-grid" id="questions-grid"></div></div>
-
-            <div class="rotating-quotes">
-                <h3>Wisdom in Rotation</h3>
-                <div id="rotating-quote" class="rotating-quote"></div>
+    <!-- DARSHANA PAGE -->
+    <section id="darshana" class="page hidden">
+        <div class="content-container">
+            <h1 class="page-title">Darshana: Wisdom of Bharat</h1>
+            <p class="definition">Indian philosophy as a plural tradition of inquiry into reality, knowledge, and liberation.</p>
+            
+            <div class="section">
+                <h2>Schools</h2>
+                <div class="cards-grid">
+                    <div class="card">Nyaya</div>
+                    <div class="card">Vaisheshika</div>
+                    <div class="card">Samkhya</div>
+                    <div class="card">Yoga</div>
+                    <div class="card">Mimamsa</div>
+                    <div class="card">Vedanta</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Thinkers</h2>
+                <div class="cards-grid">
+                    <div class="card">Mahavira</div>
+                    <div class="card">Buddha</div>
+                    <div class="card">Nagarjuna</div>
+                    <div class="card">Adi Shankaracharya</div>
+                    <div class="card">Chanakya</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>Core Ideas</h2>
+                <div class="cards-grid">
+                    <div class="card">Dharma</div>
+                    <div class="card">Karma</div>
+                    <div class="card">Moksha</div>
+                    <div class="card">Atman</div>
+                    <div class="card">Brahman</div>
+                    <div class="card">Shunya</div>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- COMMUNITY & CONTRIBUTE PAGES (same as before) -->
-    <section id="community-page" class="page">
-        <div class="page-container">
-            <h1>Community</h1>
-            <p class="subtitle">Thoughtful dialogue & contributions</p>
-            <div class="community-grid">
-                <div class="card"><h3>Weekly Submissions</h3><p>Share under 700 words</p><button onclick="showPage('contribute')" class="gold-btn">Submit</button></div>
-                <div class="card"><h3>Guidelines</h3><ul><li>Original</li><li>Respectful</li><li>≤700 words</li></ul></div>
+    <!-- TIMELINE PAGE -->
+    <section id="timeline" class="page hidden">
+        <div class="content-container">
+            <h1 class="page-title">Philosophy Timeline</h1>
+            <div class="timeline">
+                <div class="timeline-line"></div>
+                <!-- JS will populate nodes -->
             </div>
         </div>
     </section>
 
-    <section id="contribute-page" class="page">
-        <div class="page-container">
-            <h1>Submit Contribution</h1>
-            <form onsubmit="handleSubmit(event)">
-                <label>Title</label><input type="text" id="sub-title" required>
-                <label>Text (max 700 words)</label><textarea id="sub-text" rows="12" required></textarea>
-                <label>Name</label><input type="text" id="sub-author" required>
-                <button type="submit" class="gold-btn">Submit</button>
-            </form>
+    <!-- LEXICON PAGE -->
+    <section id="lexicon" class="page hidden">
+        <div class="content-container">
+            <h1 class="page-title">Lexicon of Thought</h1>
+            <p class="subtitle">60 Essential Philosophical Terms (A–Z)</p>
+            <div id="glossary" class="accordion">
+                <!-- JS populated -->
+            </div>
         </div>
     </section>
 
-    <footer><p>© The Academy Philosophy Club</p></footer>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="gold-divider"></div>
+        <p>© The Academy • A space for curious minds • DAV Public School, Lawrence Road, Amritsar</p>
+        <p id="last-updated">Last updated: <span></span></p>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
